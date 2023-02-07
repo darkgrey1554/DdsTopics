@@ -1,0 +1,15 @@
+@PACKAGE_INIT@
+
+if(fastrtps_FOUND)
+	if(NOT (fastrtps_VERSION VERSION_EQUAL @VERSION_DDS@))
+		message(WARNING "Using FastDDS version: ${fastrtps_VERSION}, DdsTopics configured for version @VERSION_DDS@")
+	endif()
+else()
+	find_package(fastrtps @VERSION_DDS@ EXACT)
+	if(NOT fastrtps_FOUND)
+		find_package(fastrtps REQURED)
+		message(WARNING "Using FastDDS version: ${fastrtps_VERSION}, DdsTopics configured for version @VERSION_DDS@")
+	endif()
+endif()
+
+@INCLUDE_DDSFORMAT_TARGETS@

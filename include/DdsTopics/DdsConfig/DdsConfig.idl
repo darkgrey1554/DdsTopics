@@ -1,0 +1,12 @@
+
+/// <summary>
+/// Topic control
+/// </summary>
+
+struct DdsConfig
+{
+	long long config_time;
+	unsigned long id_source;
+	unsigned long id_target;
+	sequence<char> conf_subject;
+};

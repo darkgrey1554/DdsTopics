@@ -1,0 +1,14 @@
+
+/// <summary>
+/// Topic control
+/// </summary>
+
+struct DdsStatus
+{
+	long long st_time;
+	unsigned long id_source;
+	unsigned long id_target;
+	unsigned long cmd_code;
+	unsigned long st_code;
+	char st_desc[1024];
+};

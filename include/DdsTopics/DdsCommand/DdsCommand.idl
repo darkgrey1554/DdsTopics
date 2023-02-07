@@ -1,0 +1,13 @@
+
+/// <summary>
+/// Topic control
+/// </summary>
+
+struct DdsCommand
+{
+	unsigned long id_source;
+	unsigned long id_target;
+	long long cmd_time;
+	unsigned long cmd_code;
+	char cmd_parameter[256];
+};
